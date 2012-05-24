@@ -18,9 +18,13 @@ map '/' do
 <html lang="en">
 <head>
   <title>Welcome to OpenShift</title>
+  <style>
+    
+  </style>
 </head>
 <body>
     <img src="troll-face.jpg" alt="Problem?" />
+    <h1>U MAD BRO?</h1>
 </body>
 </html>
 WELCOME_CONTENTS
