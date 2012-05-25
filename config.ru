@@ -17,7 +17,7 @@ map '/' do
 <!doctype html>
 <html lang="en">
 <head>
-  <title>Welcome to OpenShift</title>
+  <title>U MAD BRO?</title>
   <style>
   h1    
   </style>
