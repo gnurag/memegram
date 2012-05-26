@@ -1,0 +1,45 @@
+RHC Commands
+
+1) Creating and deploying apps.
+
+$ rhc app create -a memegram -t ruby-1.8
+$ git clone ssh://f5de6640d7e3437887e8d388dcb71a23@memegram-rootconf.rhcloud.com/~/git/memegram.git/
+$ git remote add github git@github.com:gnurag/memegram.git
+$ git pull github master
+$ git push origin master
+$ rhc app destroy -a memegram
+
+
+2) Adding cartridges
+
+$ rhc app cartridge list -a memegram
+$ rhc app cartridge add -a memegram -c mongodb-2.0
+$ rhc app cartridge add -a memegram -c rockmongo-1.1
+
+View: https://memegram-rootconf.rhcloud.com/rockmongo/
+
+3) Adding metrics
+
+$ rhc app cartridge add -a memegram -c metrics-0.1
+
+View: https://memegram-rootconf.rhcloud.com/metrics/
+
+3.1) Inspecting logs
+
+$ rhc app tail -a memegram
+
+4) Openshift shell
+
+$ rhc domain show
+$ ssh 7d1cf6aa1892411da47b3c5dd210300c@memegram-rootconf.rhcloud.com
+
+
+5) Application snapshots
+
+$ rhc app snapshot save -a memegram
+$ rhc app snapshot restore -a memegram --filepath memegram.tar.gz
+
+
+6) Port forwarding
+
+$ rhc-port-forward -a memegram
